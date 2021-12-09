@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "routes": [
+		{
+			"src": "/codingtask/(.*)",
+			"headers": { "access-control-allow-origin": "*" },
+			"dest": "http://cdn.sixt.io/codingtask/$1"
+		},
+		{ "handle": "filesystem" },
+		{ "src": "/.*", "dest": "/index.html" }
+	]
+}
