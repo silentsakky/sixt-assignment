@@ -1,6 +1,5 @@
 .offers-grid {
 	display: grid;
-	gap: 1rem;
 }
 
 @media (min-width: 780px) {
