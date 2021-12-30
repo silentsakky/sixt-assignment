@@ -9,7 +9,7 @@ Application to load offers from API endpoint and show it in grid layout, it's us
 - Please use https://sixt-assignment.vercel.app/ to load production version of application
 
 ## Third Party Libraries
-- [lozad](https://www.npmjs.com/package/lozad) - to lazily load images
+- [react-lazy-load-image-component](https://www.npmjs.com/package/react-lazy-load-image-component) - to lazily load images
 - [redux](https://www.npmjs.com/package/redux) - for fetching data from api
 - [redux-thunk](https://www.npmjs.com/package/redux-thunk) - to support async action creators in redux (for fetching data from api)
 - [redux-devtools-extension](https://www.npmjs.com/package/redux-devtools-extension) (dev dependency) - for debugging redux flows

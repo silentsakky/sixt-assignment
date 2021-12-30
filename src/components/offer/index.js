@@ -1,3 +1,6 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 import "./offer.css";
 import placeholder from "../../images/placeholder.svg";
 
@@ -8,19 +11,21 @@ export default function Offer({ offer }) {
 	const currency = offer?.prices?.totalPrice?.amount?.currency;
 
 	return (
-		<div className="offer">
-			<div className="image">
-				<img
-					className="lozad"
-					data-src={image}
-					data-background-image={placeholder}
-					alt={description}
-				/>
-			</div>
-			<div className="description">{description}</div>
-			<div className="price">
-				{price} {currency}
-			</div>
-		</div>
+		<figure className="offer">
+			<LazyLoadImage
+				className="image"
+				src={image}
+				placeholderSrc={placeholder}
+				alt={description}
+				effect="blur"
+			/>
+			<figcaption>
+				{description}
+				<br />
+				<span className="price">
+					{price} {currency}
+				</span>
+			</figcaption>
+		</figure>
 	);
 }
